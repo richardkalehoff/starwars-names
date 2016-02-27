@@ -25,6 +25,13 @@ describe( 'starwars-names', function() {
 
             expect( random1 ).to.not.equal( random2 );
         } );
+
+        it( 'should return an array of random items when passed a number', function() {
+            var randArr = starWars.random( 3 );
+
+            expect( randArr ).to.be.an( 'array' );
+            expect( randArr ).to.have.lengthOf( 3 );
+        } );
     } );
 } );
 
