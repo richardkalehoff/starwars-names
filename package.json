@@ -7,7 +7,7 @@
     "prebuild": "rm -rf dist && mkdir dist",
     "build": "babel src/index.js -o dist/index.js",
     "postbuild": "cp src/starwars-names.json dist/starwars-names.json",
-    "test": "mocha src/index.test.js -w"
+    "test": "mocha src/index.test.js -w --compilers js:babel-register"
   },
   "repository": {
     "type": "git",
